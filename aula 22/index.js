@@ -2,7 +2,12 @@
 
 function criePessoa(nome, sobrenome, a, p) {
     return {
-        nome, sobrenome,
+        nome, 
+        sobrenome,
+        //Getter
+        get nomeCompleto(){
+            return `${nome} ${sobrenome}`
+        },
         fala: function (assunto) {
             return `${this.nome} está ${assunto}`;
         },
