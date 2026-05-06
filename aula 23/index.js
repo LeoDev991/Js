@@ -9,4 +9,4 @@ function Pessoa(nome,sobrenome) {
 const p1 = new Pessoa ("Leonardo", "Thome")
 const p2 = new Pessoa ("Bionda", "Ferreira")
 
-console.log(p2.nome)
+console.log(p2.sobrenome)
