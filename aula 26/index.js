@@ -5,4 +5,4 @@ const nomes = ["Leonardo", "Thome", "da", "Costa"];
 
 const nomeCompleto = nomes.join(" ");
 
-console.log(nomeCompleto);
+console.log(nomeCompleto); 
