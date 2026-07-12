@@ -1,2 +1,2 @@
-# Js
-Repositório criado para estudo
+
+# Typescript module
