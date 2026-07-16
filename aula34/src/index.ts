@@ -1,4 +1,5 @@
+const produto = {nome: 'Caneca' , preco: 19.90}
+const outraCoisa = produto;
 
-export function sayHelloWorld(world: string) {
-  return `Hello ${world}`;
-}
+produto.nome = 'Leonardo Thome';
+console.log(outraCoisa);

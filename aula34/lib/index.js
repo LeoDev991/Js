@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sayHelloWorld = sayHelloWorld;
-function sayHelloWorld(world) {
-    return `Hello ${world}`;
-}
+const produto = { nome: 'Caneca', preco: 19.90 };
+const outraCoisa = produto;
+produto.nome = 'Leonardo Thome';
+console.log(outraCoisa);

@@ -6,11 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "prestart": "npm run build",
-    "start": "node ./lib/index.js",
-    "start:watch": "tsc -w",
     "lint": "tslint -c tslint.json src/**/*.ts",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "start:watch": "ts-node-dev --respawn --transpile-only src/index.tsclear"
   },
   "keywords": [],
   "author": "",
@@ -24,5 +22,8 @@
     "./bin/*",
     "./lib/*"
   ],
-  "typings": "./lib/index.d.ts"
+  "typings": "./lib/index.d.ts",
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
+  }
 }
