@@ -1,7 +1,20 @@
-// new Object -> Object.prototype
-
-const objA = {
-    chaveA: 'A'
+function Produto (nome, preco) {
+    this.nome = nome;
+    this.preco = preco;
 }
 
-// __proto__: Object.prototype
+Produto.prototype.desconto = function (percentual) {
+    this.preco = this.preco - (this.preco * (percentual / 100));
+}
+
+Produto.prototype.aumento = function (percentual) {
+    this.preco = this.preco + (this.preco * (percentual / 100));
+}
+
+const p1 = new Produto ('Camiseta', 50);
+p1.desconto(10);
+console.log(p1);
+
+const p2 = new Produto ('Caneca', 15);
+p2.aumento(20);
+console.log(p2);
