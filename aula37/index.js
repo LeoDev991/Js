@@ -34,11 +34,23 @@ ContaCorrente.prototype = Object.create(Conta.prototype);
 ContaCorrente.prototype.constructor = ContaCorrente;
 
 ContaCorrente.prototype.sacar = function (valor) {
-    if (valor > this.saldo) {
+    if (valor > this.saldo + this.limite) {
         console.log(`Saldo insuficiente: ${this.saldo}`)
-
-    } else {
-        this.saldo -= valor;
+        return;
     }
-    this.verSaldo()
+
+    this.saldo -= valor;
+    this.verSaldo();
 }
+
+const contaPoupanca = new Conta(11, 22, 0);
+contaPoupanca.depositar(10);
+contaPoupanca.sacar(10);
+contaPoupanca.sacar(10);
+
+console.log('---------------------');
+
+const cc = new ContaCorrente(11, 22, 0, 200);
+cc.depositar(10);
+cc.sacar(210);
+// cc.sacar(10);
